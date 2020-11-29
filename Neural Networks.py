@@ -1,4 +1,4 @@
-import numpy as np  #注意python和numpy版本的对应，如果不对应提示出错。
+import numpy as np  
 
 class Loader(object):
 
@@ -80,9 +80,9 @@ def printimg(onepic):
     for i in range(28):
         for j in range(28):
             if onepic[i, j] == 0:
-                print('   ', end='')  # python3支持这种格式，如果是python2不支持print这种格式
+                print('   ', end='')  
             else:  # print "* "
-                print('* ', end='')  # python3geshi
+                print('* ', end='') 
         print('')
 
 
@@ -90,8 +90,7 @@ if __name__=="__main__":
     train_data_set, train_labels = get_training_data_set(100)
     train_data_set = np.array(train_data_set)
     train_labels = np.array(train_labels)
-    for i in range(28): #实现输出前28个手写体数字。
-
+    for i in range(28): 
         onepic = train_data_set[i]
         printimg(onepic)
         print(train_labels[i].argmax())
